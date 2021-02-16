@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=" {%static '/css/bootstrap.css'%} ">
+    <link rel="stylesheet" href="{%static '/css/imagetext.css'%}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="{%static '/images/symb.jpeg'%}" />
+    <title>Document</title>
+</head>
+<style>
+    .navbar {
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        right: 0;
+
+    }
+
+    .content {
+
+        z-index: 2;
+    }
+
+    .clip {
+        border-bottom-right-radius: 50% 15%;
+        border-bottom-left-radius: 50% 15%;
+    }
+
+    .spaceing {
+        letter-spacing: 3px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .num {
+        border-bottom: 1px solid black;
+        padding: 5px 0px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 50%;
+    }
+
+    .col-md-3:hover .num {
+        background-color: rgb(16, 124, 248);
+        color: white;
+        transition-duration: 0.6s;
+    }
+
+    .para {
+        font-size: 14px;
+        color: rgb(94, 94, 94);
+    }
+
+    .showcase {
+        box-shadow: 50px 10px #cac9c9;
+        box-shadow: 0 0 25px 0 rgba(50, 50, 50, .3) inset;
+    }
+
+    .formdiv {
+        background-image: url("{%static '/images/map.jpg'%}");
+        background-repeat: no-repeat;
+        border-radius: 10px;
+        background-size: cover;
+    }
+    ul li{
+        text-decoration: none;
+        display: inline;
+        
+    }
+    ul{
+        padding:0;
+    }
+    .mailto{
+        font-size: 14px;
+        text-decoration: none;
+        text-emphasis:none;
+        color: black;
+    }
+    .mailto:hover{
+        text-decoration: none;
+        color: black;
+    }
+    .no-arrow {
+        -moz-appearance: textfield;
+      }
+      .no-arrow::-webkit-inner-spin-button {
+        display: none;
+      }
+      .no-arrow::-webkit-outer-spin-button,
+      .no-arrow::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      .footer-ul li a{
+          text-decoration: none;
+          margin: 0px 10px;
+      }
+      .social-media li a{
+        text-decoration: none;
+        margin: 0px 5px;
+      }
+      @media only screen and (max-width: 700px) {
+        .remove {
+          display: none;
+        }
+      }
+</style>
+{% if message %}
+  <script>
+      alert("{{message}}")
+  </script>
+{% endif %}
+<body>
+
+    <!-- Image and text -->
+    <nav class="navbar navbar-light bg-light justify-content-center">
+        <a class="navbar-brand" href="#">
+            <img src="{%static '/images/logoblue.png'%}" width="200px" height="40" class="d-inline-block align-top"
+                alt="">
+
+        </a>
+    </nav>
+    <section class="showcase">
+        <div class="video-container clip">
+
+            <img class="" src="{%static '/images/first.jpg'%}" width="100%" alt="">
+
+        </div>
+        <div class="content">
+            <h5 style="color: black;">IT Services Designed For</h5>
+            <h1 style="font-size:7vh;color:black;" data-aos="zoom-out-down">Your Business</h1>
+            <h5 style="color: black;">Highly Tailored IT Design, Development & Security Services.</h5><br><br>
+            <button id="videobtn" class="btn btn-primary" onclick="location.href='#consulation'">
+                FREE CONSULTATION
+            </button>
+
+        </div>
+    </section><br>
+    <h5 class="spaceing">HOW WE WORKS</h5>
+    <h3 class="spaceing">How it helps
+        <span style="color: rgb(16, 124, 248); font-weight: bolder;">
+            your business succeed
+        </span>
+    </h3><br><br>
+    <div class="container justify-content-center">
+
+
+        <div class="row">
+            <div class="col-md-3">
+                <h4> <span class="num">1</span></h4><br>
+                <h4>Discussion</h4>
+                <p class="para">We meet customers in set place to discuss the details about needs and demands before
+                    proposing a plan.</p>
+            </div>
+            <div class="col-md-3">
+                <h4><span class="num">2</span></h4><br>
+                <h4>Concepts & Initatives</h4>
+                <p class="para">Our experts come up with all kinds of ideas and initiatives for delivering the best
+                    solutions for IT services chosen.</p>
+            </div>
+            <div class="col-md-3">
+                <h4><span class="num">3</span></h4><br>
+                <h4>Testing & Trying</h4>
+                <p class="para">After agreeing on the ideas and plans, we will conduct as scheduled and give comments on
+                    the results & adaptations.</p>
+            </div>
+            <div class="col-md-3">
+                <h4><span class="num">4</span></h4><br>
+                <h4>Execute & install</h4>
+                <p class="para">Once the final plan is approved, everything will be conducted according to the agreed
+                    contract.</p>
+            </div>
+        </div><br>
+        <div class="formdiv" id="consulation">
+            <div class="row text-center">
+                <div class="col-md-6"><br>
+                    <h1>5.0/5.0</h1>
+                    <ul>
+                        <li><img src="{%static '/images/star.png'%}" alt=""></li>
+                        <li><img src="{%static '/images/star.png'%}" alt=""></li>
+                        <li><img src="{%static '/images/star.png'%}" alt=""></li>
+                        <li><img src="{%static '/images/star.png'%}" alt=""></li>
+                        <li><img src="{%static '/images/star.png'%}" alt=""></li>
+                    </ul>
+                    <h5>by our customers for 20+ clients</h5>
+
+                    <div class="row my-5 ">
+                        <div class="col-2"></div>
+                        <div class="col text-right">
+                            <img src="{%static '/images/gmail.png'%}" alt="">
+                        </div>
+                        <div class="col  text-left">
+                            <h5>SAY HELLO</h5>
+                            <a class="mailto" href="mailto:someone@example.com">tdb@gmail.com</a>
+                        </div>
+                        <div class="col-4"></div>
+                    </div>
+                </div>
+                <div class="col-md-6 my-4 ">
+                    <div class="card mx-auto" style="width:90%">
+
+                        <div class="card-body text-left">
+                            <form action="{%url 'submit'%}" method="POST">
+                                {% csrf_token %}
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+
+                                        <input type="text" class="form-control" pattern="^[a-zA-Z ]*$" name="name" id="inputEmail4" placeholder="Name*" required>
+                                    </div>
+                                    <div class="form-group col-md-6">
+
+                                        <input type="tel" class="form-control no-arrow" pattern="^[6-9]\d{9}$" name="mobile" id="inputPassword4"
+                                            placeholder="Mobile Number*" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+
+                                    <input type="email" class="form-control" id="inputAddress" name="email" placeholder="Email*" required>
+                                </div>
+                                <div class="form-group ">
+
+                                    <select id="inputState1" name="inquiry" class="form-control" required>
+                                        <option value="" selected>Your inquiry about</option>
+                                        <option value="Web Development">Web Development</option>
+                                        <option value="Mobile Application">Mobile Application </option>
+                                        <option value="Desktop Software">Desktop Software</option>
+                                        <option value="Digital Marketing">Digital Marketing</option>
+                                    </select>
+                                </div>
+                                <div class="form-group ">
+
+                                    <select id="inputState2" name="pay" class="form-control" required>
+                                        <option value="" selected>I will genuinely pay about:</option>
+                                        <option value="$60 - $500">$60 - $500</option>
+                                        <option value="$500 - $1500">$500 - $1500 </option>
+                                        <option value="$1500 - $3500">$1500 - $3500</option>
+                                        <option value="More than $3500">More than $3500</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+
+                                    <textarea class="form-control" name="need" placeholder="Please describe what you need."
+                                        id="exampleFormControlTextarea1" rows="3"></textarea>
+                                </div>
+                                <center><button type="submit" style="padding: 10px;" class="btn btn-primary ">Alright it's Done
+                                        </button></center>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+    <footer class="remove">
+        <div class="row" style="margin-left:  0px; margin-right:0px">
+            <div class="col-md-3">
+                <img src="{%static '/images/logoblue.png'%}" width="150" alt="">
+            </div>
+            <div class="col-md-6">
+                <ul class="footer-ul" >
+                    <li>
+                        <a  href="company.html">Company </a>
+                    </li>
+                    <li>
+                        <a  href="consulting.html">Consulting </a>
+                    </li>
+                    <li >
+                        <a  href="team.html">Team </a>
+                    </li>
+                    <li>
+                        <a href="portfolio.html">Career </a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-3" >
+                
+                <ul class="social-media">
+                    <li><a  href="https://www.facebook.com/Solving-Scale-AI-100840541958369"><i class="fa fa-facebook-f" style="color: rgb(104, 100, 100);"></i></a></li>
+                    <li><a  href="https://www.linkedin.com/company/solvingscale-ai/"><i class="fa fa-linkedin" style="color: rgb(104, 100, 100);"></i></a></li>
+                    <li><a  href="https://twitter.com/AiScale"><i class="	fa fa-twitter" style="color: rgb(104, 100, 100);"></i></a></li>
+                    <li><a  href="https://www.instagram.com/solvingscale.ai/"><i class="fa fa-instagram" style="color: rgb(104, 100, 100);"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    
+
+</body>
+
+</html>
